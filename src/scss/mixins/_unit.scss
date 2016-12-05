@@ -1,0 +1,36 @@
+/**
+ * 去掉数值的单位
+ * stripUnits(16px) => 16
+ */
+@function stripUnits ($number) {
+	@return $number / ($number * 0 + 1);
+}
+//px转rem, 16px => 1rem
+@function toRem($value, $root:$font-size-root) {
+	@if (unit($value) != 'rem') {
+		$value: stripUnits($value);
+	}
+	@if ($value == 0) {
+		@return 0;
+	}
+	$root: stripUnits($root);
+	@return if($value == 0, 0, $value / $root * 1rem);
+}
+
+/**
+ * 多数值转rem
+ * 用于padding / margin等
+ * eg. rem(16 32 16 16) => 1rem 2rem 1rem 1rem
+ */
+@function rem ($values) {
+	$results: ();
+	$count: length($values);
+
+	@if $count == 1 {
+		@return toRem($values);
+	}
+	@for $i from 1 through $count {
+		$results: append($results, toRem(nth($values, $i)));
+	}
+	@return $results;
+}
