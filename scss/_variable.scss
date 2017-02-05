@@ -1,0 +1,41 @@
+$font-size-root: 16px !default;
+$font-size-base: 14px !default;
+$line-height-base: 1.5 !default;
+$font-family-base: "Pingfang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif !default;
+$font-family-code: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-number: SourceCodeProRegular, Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$h1:32px !default;
+$h2:24px !default;
+$h3:20px !default;
+$h4:18px !default;
+$h5:16px !default;
+$h6:14px !default;
+$small: 12px!default;
+$color-title: #212121 !default;
+$color-text: #515151 !default;
+$color-description: #757575 !default;
+$color-hint: #9e9e9e !default;
+$color-placeholder: #bdbdbd!default;
+$color-border: #d3d3d3!default;
+$color-light: #f0f0f0!default;
+$color-lighter: #f5f5f5!default;
+$color-lightest: #fafafa!default;
+$color-primary: #0275d8 !default;
+$color-positive: #5cb85c !default;
+$color-negative: #d9534f !default;
+$form-radius: 2px!default;
+$form-pill: 200px!default;
+//34px
+$form-size: (font-size:14px, line-height:1.4286, padding-y:6px, padding-x:16px) !default;
+//24px
+$form-size-tiny: (font-size:12px, line-height:1.5, padding-y:2px, padding-x:12px) !default;
+//30px
+$form-size-small: (font-size:14px, line-height:1.4286, padding-y:4px, padding-x:14px) !default;
+//44px
+$form-size-large: (font-size:16px, line-height:1.625, padding-y:8px, padding-x:20px) !default;
+
+//disabled
+$disabled-opacity : .5 !default;
+$enable-form-translation : true !default;
+
+$image64-dropdown : url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBmaWxsPSIjNkY2RjZGIj4KICAgICAgICAgICAgPHBvbHlnb24gdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOC4wMDAwMDAsIDguNTAwMDAwKSBzY2FsZSgxLCAtMSkgdHJhbnNsYXRlKC04LjAwMDAwMCwgLTguNTAwMDAwKSAiIHBvaW50cz0iOCA1IDEyIDEyIDQgMTIiPjwvcG9seWdvbj4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==) !default;

@@ -1,5 +1,5 @@
 {
-  "name": "mo",
+  "name": "mo-css",
   "version": "1.0.0",
   "description": "smohan css framework",
   "main": "gulpfile.js",
@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/S-mohan/mo.git"
+    "url": "git+https://github.com/S-mohan/mo-css.git"
   },
   "keywords": [
     "smohan",
     "ui",
     "css"
   ],
-  "author": "smohan (https://smohan.net)",
+  "author": "smohan (https://smohan.im(net))",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/S-mohan/mo/issues"
+    "url": "https://github.com/S-mohan/mo-css/issues"
   },
-  "homepage": "https://github.com/S-mohan/mo#readme",
+  "homepage": "https://github.com/S-mohan/mo-css#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",

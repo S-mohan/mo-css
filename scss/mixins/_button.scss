@@ -1,0 +1,45 @@
+/**
+ * [buttonSize]
+ * @param  {[type]} $size [size map]
+ * @return {[type]} 
+ */
+@mixin buttonSize ($size) {
+    $font-size: map_get($size, font-size);
+    $line-height: map_get($size, line-height);
+    $padding-x: map_get($size, padding-x);
+    $padding-y: map_get($size, padding-y);
+    font-size: rem($font-size);
+    line-height: $line-height;
+    padding: rem($padding-y $padding-x);
+}
+
+/**
+ * [buttonStyle]
+ * @param  {[type]} $border       border-color
+ * @param  {[type]} $background      background-color
+ * @param  {[type]} $color          text-color
+ * @param  {[type]} $hoverBorder     hover & active border-color
+ * @param  {[type]} $hoverBackground  hover & active background-color
+ * @param  {[type]} $hoverColor      hover & active text-color
+ * @return {[type]}               
+ */
+@mixin buttonStyle ($border, $background, $color, $hoverBorder, $hoverBackground, $hoverColor) {
+    border-color: $border;
+    background-color: $background;
+    color: $color;
+
+    &:not(.readonly):not([readonly]):not(.disabled):not([disabled]) {
+        &:hover, &:active {
+            border-color: $hoverBorder;
+            background-color: $hoverBackground;
+            color: $hoverColor;
+        }
+    }
+    &.readonly, &[readonly] {
+        cursor: default;
+    }
+    &.disabled, &[disabled] {
+        cursor: not-allowed;
+        opacity: $disabled-opacity;
+    }
+}

@@ -1,0 +1,27 @@
+@mixin radioSize($size) {
+	padding-left: $size;
+
+	> .icon {
+		width: $size;
+		height: $size;
+	}
+}
+@mixin radioStyle ($color) {
+	> .icon {
+		border-color: $color;
+	}
+	> input[type="radio"] {
+		&:checked ~ .icon:after {
+			@if $enable-form-translation {
+				transition: all .06s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+			}
+			background-color: $color;
+		}
+		&:disabled, &.disabled {
+			~ span {
+				opacity: $disabled-opacity;
+				cursor: not-allowed;
+			}
+		}
+	}
+}

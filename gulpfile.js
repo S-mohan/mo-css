@@ -18,11 +18,6 @@ const CONFIGS = {
 		mediaMerging: true, //合并@media
 		keepSpecialComments: '*' //保留浏览器前缀
 	},
-	js: {
-		mangle: true, //修改变量名
-		compress: true, //完全压缩
-		preserveComments: 'license' //保留申明注释
-	},
 	autoprefixer: {
 		browsers: ['last 2 versions', 'Android >= 4.0'],
 		cascade: true, //是否美化属性值 默认：true
@@ -31,15 +26,15 @@ const CONFIGS = {
 }
 
 gulp.task('compile:sass', () => {
-	return gulp.src('./src/scss/**/*.scss')
+	return gulp.src('./scss/**/*.scss')
 		.pipe(sass(CONFIGS.sass))
 		.pipe(plumber())
 		.pipe(autoprefixer(CONFIGS.autoprefixer))
-		.pipe(gulp.dest('./dist'))
+		.pipe(gulp.dest('./css'))
 })
 
 gulp.task('watch', () => {
-	gulp.watch('./src/scss/**/*.scss', ['compile:sass'])
+	gulp.watch('./scss/**/*.scss', ['compile:sass'])
 })
 
 gulp.task('default', ['watch']);

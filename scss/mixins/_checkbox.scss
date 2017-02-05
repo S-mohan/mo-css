@@ -1,0 +1,28 @@
+@mixin checkboxSize($size) {
+	padding-left: $size;
+
+	> .icon {
+		width: $size;
+		height: $size;
+	}
+}
+@mixin checkboxStyle ($color) {
+	> .icon {
+		border-color: $color;
+	}
+	> input[type="checkbox"] {
+		&:checked ~ .icon:after {
+			@if $enable-form-translation {
+				transition: all .06s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+			}
+			border-left-color: $color;
+			border-bottom-color: $color;
+		}
+		&:disabled, &.disabled {
+			~ span {
+				opacity: $disabled-opacity;
+				cursor: not-allowed;
+			}
+		}
+	}
+}

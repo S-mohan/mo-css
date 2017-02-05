@@ -1,0 +1,40 @@
+@mixin switchSize ($width, $height) {
+  padding-left: $width;
+  $_height : $height - rem(2px);
+  $_width  : $width - rem(2px);
+  > .icon {
+    width: $width;
+    height: $height;
+    border-radius: $height;
+    &:before{
+      width: $_width;
+      height: $_height;
+      border-radius: $_height / 2;
+    }
+    &:after {
+      width: $_height;
+      height: $_height;
+    }
+  }
+  > input {
+    &:checked ~ .icon:after{
+      $_left :( $width - rem(2px) - $_height);
+      transform: translateX($_left);
+    }
+  }
+}
+
+@mixin switchStyle($color) {
+  > input {
+    &:checked ~ .icon {
+      border-color: $color;
+      background-color: $color;
+    }
+    &:disabled, &.disabled {
+      ~ span {
+        opacity: $disabled-opacity;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
