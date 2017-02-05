@@ -28,8 +28,7 @@
     "gulp-clean-css": "^2.0.13",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-scss": "^1.4.0",
+    "gulp-sass": "^3.1.0",
     "gulp-sequence": "^0.4.6",
     "webpack": "^1.13.3"
   }
