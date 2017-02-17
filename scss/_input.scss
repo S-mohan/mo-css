@@ -86,12 +86,16 @@
 
 select[class^='mo-input'],
 select[class*=' mo-input'] {
-	padding-right: 1.75rem;
-    vertical-align: middle;
-    background-image: $image64-dropdown;
-    background-position: right rem(5) center;
-    background-repeat: no-repeat;
-	&::-ms-expand {
-        display: none;
+    &:not[multiple] {
+        padding-right: 1.75rem;
+
+        vertical-align: middle;
+
+        background-image: $image64-dropdown;
+        background-repeat: no-repeat;
+        background-position: right rem(5) center;
+        &::-ms-expand {
+            display: none;
+        }
     }
 }

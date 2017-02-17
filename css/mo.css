@@ -695,8 +695,9 @@ a[href]:hover {
 }
 
 /* line 16, scss/mixins/_input.scss */
-[class^='mo-input']:not(textarea),
-[class*=' mo-input']:not(textarea) {
+[class^='mo-input']:not(textarea), [class^='mo-input']:not[multiple],
+[class*=' mo-input']:not(textarea),
+[class*=' mo-input']:not[multiple] {
   height: 2.12502rem;
 }
 
@@ -716,7 +717,7 @@ a[href]:hover {
 }
 
 /* line 16, scss/mixins/_input.scss */
-.mo-input--tiny:not(textarea) {
+.mo-input--tiny:not(textarea), .mo-input--tiny:not[multiple] {
   height: 1.5rem;
 }
 
@@ -728,7 +729,7 @@ a[href]:hover {
 }
 
 /* line 16, scss/mixins/_input.scss */
-.mo-input--small:not(textarea) {
+.mo-input--small:not(textarea), .mo-input--small:not[multiple] {
   height: 1.87503rem;
 }
 
@@ -740,7 +741,7 @@ a[href]:hover {
 }
 
 /* line 16, scss/mixins/_input.scss */
-.mo-input--large:not(textarea) {
+.mo-input--large:not(textarea), .mo-input--large:not[multiple] {
   height: 2.75rem;
 }
 
@@ -820,19 +821,19 @@ a[href]:hover {
   opacity: 0.5;
 }
 
-/* line 87, scss/_input.scss */
-select[class^='mo-input'],
-select[class*=' mo-input'] {
+/* line 89, scss/_input.scss */
+select[class^='mo-input']:not[multiple],
+select[class*=' mo-input']:not[multiple] {
   padding-right: 1.75rem;
   vertical-align: middle;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBmaWxsPSIjNkY2RjZGIj4KICAgICAgICAgICAgPHBvbHlnb24gdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOC4wMDAwMDAsIDguNTAwMDAwKSBzY2FsZSgxLCAtMSkgdHJhbnNsYXRlKC04LjAwMDAwMCwgLTguNTAwMDAwKSAiIHBvaW50cz0iOCA1IDEyIDEyIDQgMTIiPjwvcG9seWdvbj4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
-  background-position: right 0.3125rem center;
   background-repeat: no-repeat;
+  background-position: right 0.3125rem center;
 }
 
-/* line 94, scss/_input.scss */
-select[class^='mo-input']::-ms-expand,
-select[class*=' mo-input']::-ms-expand {
+/* line 97, scss/_input.scss */
+select[class^='mo-input']:not[multiple]::-ms-expand,
+select[class*=' mo-input']:not[multiple]::-ms-expand {
   display: none;
 }
 

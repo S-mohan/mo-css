@@ -13,7 +13,7 @@
     font-size: rem($font-size);
     line-height: $line-height;
     padding: rem($padding-y $padding-x);
-    &:not(textarea) {
+    &:not(textarea), &:not[multiple] {
         height: rem($height);
     }
 }
