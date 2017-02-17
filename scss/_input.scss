@@ -84,9 +84,9 @@
     }
 }
 
-select[class^='mo-input'],
-select[class*=' mo-input'] {
-    &:not[multiple] {
+select {
+    &[class^='mo-input']:not([multiple]),
+    &[class*=' mo-input']:not([multiple]) {
         padding-right: 1.75rem;
 
         vertical-align: middle;
@@ -97,5 +97,20 @@ select[class*=' mo-input'] {
         &::-ms-expand {
             display: none;
         }
+    }
+}
+
+
+textarea,
+select[multiple] {
+    &[class^='mo-input'],
+    &[class*=' mo-input'] {
+        height: auto;
+    }
+}
+select[multiple] {
+    &[class^='mo-input'],
+    &[class*=' mo-input'] {
+        padding-right: 0\0;
     }
 }

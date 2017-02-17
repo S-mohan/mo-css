@@ -9,13 +9,10 @@
     $padding-x: map_get($size, padding-x);
     $padding-y: map_get($size, padding-y);
     $height: $font-size * $line-height + 2 * $padding-y + 2;
-
     font-size: rem($font-size);
     line-height: $line-height;
     padding: rem($padding-y $padding-x);
-    &:not(textarea), &:not[multiple] {
-        height: rem($height);
-    }
+    height: rem($height);
 }
 
 /**
