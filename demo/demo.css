@@ -1,0 +1,14 @@
+.demo {
+	padding: 4rem;
+}
+
+.demo > .demo-title {
+	padding-bottom: 1rem;
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 1rem;
+}
+
+.demo > .demo-main {
+	padding: 1rem 0;
+	
+}

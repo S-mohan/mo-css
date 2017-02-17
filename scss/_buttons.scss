@@ -1,60 +1,87 @@
 @import './mixins/button';
 
-.mo-button {
-	display: inline-block;
-	font-family: inherit;
-	border: rem(1) solid transparent;
-	white-space: nowrap;
-	text-align: center;
-	vertical-align: middle;
-	cursor: pointer;
-	outline: none;
-	user-select: none;
-	text-decoration: none;
-	border-radius: 0;
-	appearance: none;
-	@include buttonSize ($form-size);
 
-	&.mo-button--tiny {
-		@include buttonSize ($form-size-tiny);
-	}
-	&.mo-button--small {
-		@include buttonSize ($form-size-small);
-	}
-	&.mo-button--large {
-		@include buttonSize ($form-size-large);
-	}
-	&.mo-button--fluid {
-		width: 100%;
-		display: block;
-	}
-	&:not(.readonly):not([readonly]):not(.disabled):not([disabled]) {
-		&:hover, &:active {
-			@if $enable-form-translation {
-				transition: all .16s cubic-bezier(0.55, 0.09, 0.68, 0.53);
-			}
-			text-decoration: none;
-		}
-	}
-	//style
-	@include buttonStyle($color-border, #fff, $color-text, darken($color-border, 5%), $color-lighter, $color-text);
+[class*='mo-button'] {
+    font-family: inherit;
 
-	&.mo-button--primary {
-		@include buttonStyle($color-primary, $color-primary, #fff, darken($color-primary, 10%), darken($color-primary, 10%), #fff);
-	}
-	&.mo-button--positive {
-		@include buttonStyle($color-positive, $color-positive, #fff, darken($color-positive, 10%), darken($color-positive, 10%), #fff);
-	}
-	&.mo-button--negative {
-		@include buttonStyle($color-negative, $color-negative, #fff, darken($color-negative, 10%), darken($color-negative, 10%), #fff);
-	}
-	&.mo-button--link {
-		@include buttonStyle(transparent, transparent, $color-primary, transparent, transparent, darken($color-primary, 10%));
-	}
-	&.mo-button--radius {
-		border-radius: $form-radius;
-	}
-	&.mo-button--pill {
-		border-radius: $form-pill;
-	}
+    display: inline-block;
+
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+
+    border: rem(1) solid transparent;
+    border-radius: 0;
+    outline: none;
+
+    appearance: none;
+    @include buttonSize ($form-size);
+    @include buttonStyle($color-border, #fff, $color-text, darken($color-border, 5%), $color-lighter, $color-text);
+    &:not(.readonly):not([readonly]):not(.disabled):not([disabled]) {
+        &:hover,
+        &:active {
+            text-decoration: none;
+            @if $enable-form-translation {
+                transition: all .16s cubic-bezier(.55, .09, .68, .53);
+            }
+        }
+    }
+}
+
+//size
+.mo-button--tiny {
+    @include buttonSize ($form-size-tiny);
+}
+
+
+.mo-button--small {
+    @include buttonSize ($form-size-small);
+}
+
+
+.mo-button--large {
+    @include buttonSize ($form-size-large);
+}
+
+.mo-button--fluid {
+    display: block;
+
+    width: 100%;
+}
+
+
+//style
+.mo-button--primary {
+    @include buttonStyle($color-primary, $color-primary, #fff, darken($color-primary, 10%), darken($color-primary, 10%), #fff);
+}
+.mo-button--positive {
+    @include buttonStyle($color-positive, $color-positive, #fff, darken($color-positive, 10%), darken($color-positive, 10%), #fff);
+}
+.mo-button--negative {
+    @include buttonStyle($color-negative, $color-negative, #fff, darken($color-negative, 10%), darken($color-negative, 10%), #fff);
+}
+.mo-button--link {
+    @include buttonStyle(transparent, transparent, $color-primary, transparent, transparent, darken($color-primary, 10%));
+}
+.mo-button--radius {
+    border-radius: $form-radius;
+}
+.mo-button--pill {
+    border-radius: $form-pill;
+}
+
+[class*='mo-button'] {
+    &.readonly,
+    &[readonly] {
+        cursor: default;
+    }
+    &.disabled,
+    &[disabled] {
+        cursor: not-allowed;
+
+        opacity: $disabled-opacity;
+    }
 }

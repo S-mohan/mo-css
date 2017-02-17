@@ -35,11 +35,4 @@
             color: $hoverColor;
         }
     }
-    &.readonly, &[readonly] {
-        cursor: default;
-    }
-    &.disabled, &[disabled] {
-        cursor: not-allowed;
-        opacity: $disabled-opacity;
-    }
 }

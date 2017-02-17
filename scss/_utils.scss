@@ -1,88 +1,92 @@
-.mo-left{
-  float: left!important;
+.mo-left {
+    float: left!important;
 }
-.mo-right{
-  float: right!important;
+.mo-right {
+    float: right!important;
 }
-.mo-clearfix{
-  @include clearFix;
+.mo-clearfix {
+    @include clearFix;
 }
-.mo-text-left{
-  text-align: left!important;
+.mo-text-left {
+    text-align: left!important;
 }
-.mo-text-center{
-  text-align: center!important;
+.mo-text-center {
+    text-align: center!important;
 }
 .mo-text-right {
-  text-align: right!important;
+    text-align: right!important;
 }
-.mo-text-lowercase{
-  text-transform: lowercase!important;
+.mo-text-lowercase {
+    text-transform: lowercase!important;
 }
-.mo-text-uppercase{
-  text-transform: uppercase!important;
+.mo-text-uppercase {
+    text-transform: uppercase!important;
 }
-.mo-text-capitalize{
-  text-transform: capitalize!important;
+.mo-text-capitalize {
+    text-transform: capitalize!important;
 }
-.mo-text-overflow{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.mo-text-overflow {
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
-.mo-invisible{
-  visibility: hidden!important;
+.mo-invisible {
+    visibility: hidden!important;
 }
-.mo-visible{
-  visibility: visible!important;
+.mo-visible {
+    visibility: visible!important;
 }
 .mo-hide {
-  display: none!important;
+    display: none!important;
 }
 .mo-show {
-  display: block!important;
+    display: block!important;
 }
 .mo-inline {
-  display: inline!important;
+    display: inline!important;
 }
 .mo-inline-block {
-  display: inline-block!important;
+    display: inline-block!important;
 }
 
-.mo-bg-primary, .mo-bg-positive, .mo-bg-negative {
-  color: #fff;
+.mo-bg-primary,
+.mo-bg-positive,
+.mo-bg-negative {
+    color: #fff;
 }
 .mo-bg-primary {
-  background-color: $color-primary;
+    background-color: $color-primary;
 }
 .mo-bg-positive {
-  background-color: $color-positive;
+    background-color: $color-positive;
 }
 .mo-bg-negative {
-  background-color: $color-negative;
+    background-color: $color-negative;
 }
 
 .mo-text-primary {
-  color: $color-primary;
+    color: $color-primary;
 }
 .mo-text-positive {
-  color: $color-positive;
+    color: $color-positive;
 }
 .mo-text-negative {
-  color: $color-negative;
+    color: $color-negative;
 }
 .mo-text-title {
-  color: $color-title;
+    color: $color-title;
 }
 .mo-text-default {
-  color: $color-text;
+    color: $color-text;
 }
 .mo-text-description {
-  color: $color-description;
+    color: $color-description;
 }
-.mo-text-hint{
-  color: $color-hint;
+.mo-text-hint {
+    color: $color-hint;
 }
-.mo-text-important, .mo-code {
-  color: #bd4147;
+.mo-text-important,
+.mo-code {
+    color: #bd4147;
 }

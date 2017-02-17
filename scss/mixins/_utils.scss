@@ -2,27 +2,28 @@
  * 清除浮动
  */
 @mixin clearFix() {
-  &:before,
-  &:after {
-    display: table;
-    content: " ";
-  }
-  &:after {
-    clear: both;
-  }
+    &:before,
+    &:after {
+        display: table;
+
+        content: ' ';
+    }
+    &:after {
+        clear: both;
+    }
 }
 
 /**
  * 设置placeholder
  */
 @mixin placeholder {
-  &::-webkit-input-placeholder {
-    @content
-  }
-  &::-moz-placeholder {
-    @content
-  }
-  &:-ms-input-placeholder {
-    @content
-  }
+    &::-webkit-input-placeholder {
+        @content
+    }
+    &::-moz-placeholder {
+        @content
+    }
+    &:-ms-input-placeholder {
+        @content
+    }
 }
