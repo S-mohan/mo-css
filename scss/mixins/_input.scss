@@ -3,28 +3,18 @@
  * @param  {[type]} $size [size map]
  * @return {[type]} 
  */
-@mixin inputSize ($size, $isSelect:false) {
+@mixin inputSize ($size) {
     $font-size: map_get($size, font-size);
     $line-height: map_get($size, line-height);
     $padding-x: map_get($size, padding-x);
     $padding-y: map_get($size, padding-y);
+    $height: $font-size * $line-height + 2 * $padding-y + 2;
+
     font-size: rem($font-size);
     line-height: $line-height;
     padding: rem($padding-y $padding-x);
-    $height: $font-size * $line-height + 2 * $padding-y + 2;
-
-    //-webkit-appearance会影响 select 的padding
-    @if $isSelect {
+    &:not(textarea) {
         height: rem($height);
-    }
-    @else {
-        //for ie
-        &:not(textarea) {
-            height: rem($height)\9;
-            @media all and (-ms-high-contrast:none), (-ms-high-contrast:active) {
-                height: rem($height);
-            }
-        }
     }
 }
 
@@ -36,18 +26,10 @@
  */
 @mixin inputStyle ($border, $focusBorder) {
     border-color: $border;
-
     &:not(.readonly):not([readonly]):not(.disabled):not([disabled]) {
         &:focus {
             border-color: $focusBorder;
             box-shadow: 0 0 8px rgba($focusBorder, .35);
         }
-    }
-    &.readonly, &[readonly] {
-        cursor: default;
-    }
-    &.disabled, &[disabled] {
-        cursor: not-allowed;
-        opacity: $disabled-opacity;
     }
 }
