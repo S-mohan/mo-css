@@ -1,40 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="smohan">
-    <meta name="homepage" content="https://smohan.im">
-    <title>MoCss - 水墨寒的博客</title>
-    <link rel="stylesheet" href="../css/mo.css">
-	<link rel="stylesheet" href="demo.css">	
+	<meta charset="UTF-8">
+	<meta name="author" content="smohan">
+	<meta name="homepage" content="https://smohan.im">
+	<title>MoCss - 水墨寒的博客</title>
+	<link rel="stylesheet" href="../css/mo.css">
+	<link rel="stylesheet" href="demo.css">
+	<style type="text/css">
+		fieldset {
+			margin-bottom: 1rem;
+		}
+	</style>
 </head>
 <body>
 
-<article class="demo">
-	<h1 class="demo-title">Mo-Input</h1>
-	<aside class="demo-description"></aside>
-	<section class="demo-main">
-		<input type="text" class="mo-input" placeholder="placeholder"> <br/><br/>
-		<input type="text" class="mo-input--primary"> <br/><br/>
-		<input type="text" class="mo-input--positive"> <br/><br/>
-		<input type="text" class="mo-input--negative"> <br/><br/>
-		
-		<input type="text" class="mo-input--negative mo-input--small"> <br/><br/>
+	<article class="demo">
+		<h1 class="demo-title">Mo-Input</h1>
+		<aside class="demo-description"></aside>
+		<section class="demo-main">
+			<form>
+				<fieldset>
+					<label class="mo-radio">
+						<input type="radio" name="mo-radio">
+						<i class="icon"></i>
+						<span>radio</span>
+					</label>
+					<label class="mo-radio">
+						<input type="radio" name="mo-radio" checked>
+						<i class="icon"></i>
+						<span>radio</span>
+					</label>
+					<label class="mo-radio">
+						<input type="radio" name="mo-radio" disabled>
+						<i class="icon"></i>
+						<span>radio</span>
+					</label>
+				</fieldset>
 
-		<select class="mo-input">
-			<option>请选择</option>
-		</select> <br/><br/>
-		<select class="mo-input" multiple>
-			<option>请选择</option>
-			<option>请选择</option>
-			<option>请选择</option>
-			<option>请选择</option>
-			<option>请选择</option>
-			<option>请选择</option>
-		</select> <br/><br/>
-		<textarea rows="3" class="mo-input"></textarea>
-	</section>
-</article>
+				<fieldset>
+					<label class="mo-radio--primary">
+						<input type="radio" name="mo-radio--primary">
+						<i class="icon"></i>
+						<span>radio</span>
+					</label>
+					<label class="mo-radio--primary">
+						<input type="radio" name="mo-radio--primary" checked>
+						<i class="icon"></i>
+						<span>radio</span>
+					</label>
+					<label class="mo-radio--primary">
+						<input type="radio" name="mo-radio--primary" disabled>
+						<i class="icon"></i>
+						<span>radio</span>
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<label class="mo-radio--negative">
+						<input type="radio" name="mo-radio--negative">
+						<i class="icon"></i>
+						<span>radio</span>
+					</label>
+					<label class="mo-radio--negative">
+						<input type="radio" name="mo-radio--negative" checked>
+						<i class="icon"></i>
+						<span>radio</span>
+					</label>
+					<label class="mo-radio--negative">
+						<input type="radio" name="mo-radio--negative" disabled>
+						<i class="icon"></i>
+						<span>radio</span>
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<label class="mo-radio--positive">
+						<input type="radio" name="mo-radio--positive">
+						<i class="icon"></i>
+						<span>radio</span>
+					</label>
+					<label class="mo-radio--positive">
+						<input type="radio" name="mo-radio--positive" checked>
+						<i class="icon"></i>
+						<span>radio</span>
+					</label>
+					<label class="mo-radio--positive">
+						<input type="radio" name="mo-radio--positive" disabled>
+						<i class="icon"></i>
+						<span>radio</span>
+					</label>
+				</fieldset>
+
+				<br/>
+				<br/>
+
+				<fieldset>
+					<label class="mo-checkbox">
+						<input type="checkbox" name="mo-checkbox">
+						<i class="icon"></i>
+						<span>checkbox</span>
+					</label>
+					<label class="mo-checkbox">
+						<input type="checkbox" name="mo-checkbox" checked>
+						<i class="icon"></i>
+						<span>checkbox</span>
+					</label>
+					<label class="mo-checkbox">
+						<input type="checkbox" name="mo-checkbox" disabled>
+						<i class="icon"></i>
+						<span>checkbox</span>
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<label class="mo-checkbox--primary">
+						<input type="checkbox" name="mo-checkbox--primary">
+						<i class="icon"></i>
+						<span>checkbox</span>
+					</label>
+					<label class="mo-checkbox--primary">
+						<input type="checkbox" name="mo-checkbox--primary" checked>
+						<i class="icon"></i>
+						<span>checkbox</span>
+					</label>
+					<label class="mo-checkbox--primary">
+						<input type="checkbox" name="mo-checkbox--primary" disabled>
+						<i class="icon"></i>
+						<span>checkbox</span>
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<label class="mo-checkbox--negative">
+						<input type="checkbox" name="mo-checkbox--negative">
+						<i class="icon"></i>
+						<span>checkbox</span>
+					</label>
+					<label class="mo-checkbox--negative">
+						<input type="checkbox" name="mo-checkbox--negative" checked>
+						<i class="icon"></i>
+						<span>checkbox</span>
+					</label>
+					<label class="mo-checkbox--negative">
+						<input type="checkbox" name="mo-checkbox--negative" disabled>
+						<i class="icon"></i>
+						<span>checkbox</span>
+					</label>
+				</fieldset>
+
+				<fieldset>
+					<label class="mo-checkbox--positive">
+						<input type="checkbox" name="mo-checkbox--positive">
+						<i class="icon"></i>
+						<span>checkbox</span>
+					</label>
+					<label class="mo-checkbox--positive">
+						<input type="checkbox" name="mo-checkbox--positive" checked>
+						<i class="icon"></i>
+						<span>checkbox</span>
+					</label>
+					<label class="mo-checkbox--positive">
+						<input type="checkbox" name="mo-checkbox--positive" disabled>
+						<i class="icon"></i>
+						<span>checkbox</span>
+					</label>
+				</fieldset>
+
+					
+			</form>
+			
+		</section>
+	</article>
 
 </body>
 </html>
