@@ -15,25 +15,23 @@
     margin: 0;
 
     user-select: none;
-}
-
-[class^='mo-radio'],
-[class*=' mo-radio'],
-[class^='mo-checkbox'],
-[class*=' mo-checkbox'] {
     > .icon {
         position: absolute;
         top: 50%;
         left: 0;
-        transform: translate(0, -50%);
-        border: rem(1) solid transparent;
-        background-color: #fff;
+
         margin: 0;
         padding: 0;
-		&:after {
-			content: '';
-			position: absolute;
-		}
+
+        transform: translate(0, -50%);
+
+        border: rem(1) solid transparent;
+        background-color: #fff;
+        &:after {
+            position: absolute;
+
+            content: '';
+        }
         ~ span {
             margin-left: .5rem;
         }
@@ -43,14 +41,15 @@
         z-index: -1;
 
         opacity: 0;
-        ~ .icon,
-        ~ span {
+        ~ .icon, ~ span {
             cursor: pointer;
         }
     }
 }
 
-//radio
+
+
+//mo-radio
 [class^='mo-radio'],
 [class*=' mo-radio'] {
     @include radioSize(1.25rem);
@@ -64,17 +63,19 @@
         &:after {
             top: 50%;
             left: 50%;
+
             width: rem(12);
             height: rem(12);
             margin-top: rem(-6);
             margin-left: rem(-6);
+
             border-radius: 50%;
             background-color: transparent;
         }
     }
 }
 
-//style 
+//mo-radio--[style] 
 .mo-radio--primary {
     @include radioStyle($color-primary);
 }
@@ -86,7 +87,7 @@
 }
 
 
-//checkbox
+//mo-checkbox
 [class^='mo-checkbox'],
 [class*=' mo-checkbox'] {
     @include checkboxSize(1.25rem);
@@ -100,16 +101,19 @@
         &:after {
             top: 11.5%;
             left: 11.2%;
+
             width: 80%;
             height: 50%;
+
             transform: rotate(-50deg);
+
             border: rem(2) solid transparent;
             background-color: transparent;
         }
     }
 }
 
-//style 
+//mo-checkbox--[style] 
 .mo-checkbox--primary {
     @include checkboxStyle($color-primary);
 }
@@ -118,4 +122,92 @@
 }
 .mo-checkbox--positive {
     @include checkboxStyle($color-positive);
+}
+
+//mo-switch
+[class^='mo-switch'],
+[class*=' mo-switch'] {
+    @include switchSize(rem(40), rem(24));
+    @include switchStyle($color-placeholder);
+    & + [class^='mo-switch'],
+    & + [class*=' mo-switch'] {
+        margin-left: 1rem;
+    }
+    > .icon {
+        border: rem(1) solid #dfdfdf;
+        background-color: #dfdfdf;
+        box-shadow: #fafafa 0 0 0 0 inset;
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            content: '';
+            @if $enable-form-translation {
+                transition: transform .35s cubic-bezier(.45, 1, .4, 1);
+            }
+        }
+        &:before {
+            background-color: #fdfdfd;
+        }
+        &:after {
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+        }
+    }
+    > input {
+        &:checked ~ .icon:before {
+            transform: scale(0);
+        }
+        &:active:not(:disabled):not(.disabled) ~ .icon {
+            @if $enable-form-translation {
+                transition: background-color .1s, border .1s;
+            }
+            &:after {
+                transform: scale(1.4, 1);
+            }
+        }
+    }
+}
+
+//mo-switch--[style]
+.mo-switch--primary {
+    @include switchStyle($color-primary);
+}
+.mo-switch--positive {
+    @include switchStyle($color-positive);
+}
+.mo-switch--negative {
+    @include switchStyle($color-negative);
+}
+
+//mo-switch--[size]
+.mo-switch--small {
+    @include switchSize(rem(30), rem(18));
+}
+.mo-switch--large {
+    font-size: 1rem;
+
+    @include switchSize(rem(50), rem(30));
+}
+
+.mo-switch--reverse {
+	padding-left: 0;
+	padding-right: rem(40);
+	> .icon {
+		left: auto;
+		right: 0;
+		 ~ span {
+            margin-left: 0;
+            margin-right: .5rem;
+        }
+	}
+	&.mo-switch--small {
+		padding-right: rem(30);
+	}
+	&.mo-switch--large {
+		padding-right: rem(50);
+	}
 }

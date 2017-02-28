@@ -854,62 +854,73 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
           user-select: none;
 }
 
-/* line 24, scss/_choose.scss */
+/* line 18, scss/_choose.scss */
 [class^='mo-radio'] > .icon,
 [class*=' mo-radio'] > .icon,
 [class^='mo-checkbox'] > .icon,
-[class*=' mo-checkbox'] > .icon {
+[class*=' mo-checkbox'] > .icon,
+[class^='mo-switch'] > .icon,
+[class*=' mo-switch'] > .icon {
   position: absolute;
   top: 50%;
   left: 0;
+  margin: 0;
+  padding: 0;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   border: 0.0625rem solid transparent;
   background-color: #fff;
-  margin: 0;
-  padding: 0;
 }
 
-/* line 33, scss/_choose.scss */
+/* line 30, scss/_choose.scss */
 [class^='mo-radio'] > .icon:after,
 [class*=' mo-radio'] > .icon:after,
 [class^='mo-checkbox'] > .icon:after,
-[class*=' mo-checkbox'] > .icon:after {
-  content: '';
+[class*=' mo-checkbox'] > .icon:after,
+[class^='mo-switch'] > .icon:after,
+[class*=' mo-switch'] > .icon:after {
   position: absolute;
+  content: '';
 }
 
-/* line 37, scss/_choose.scss */
+/* line 35, scss/_choose.scss */
 [class^='mo-radio'] > .icon ~ span,
 [class*=' mo-radio'] > .icon ~ span,
 [class^='mo-checkbox'] > .icon ~ span,
-[class*=' mo-checkbox'] > .icon ~ span {
+[class*=' mo-checkbox'] > .icon ~ span,
+[class^='mo-switch'] > .icon ~ span,
+[class*=' mo-switch'] > .icon ~ span {
   margin-left: .5rem;
 }
 
-/* line 41, scss/_choose.scss */
+/* line 39, scss/_choose.scss */
 [class^='mo-radio'] > input,
 [class*=' mo-radio'] > input,
 [class^='mo-checkbox'] > input,
-[class*=' mo-checkbox'] > input {
+[class*=' mo-checkbox'] > input,
+[class^='mo-switch'] > input,
+[class*=' mo-switch'] > input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-/* line 46, scss/_choose.scss */
-[class^='mo-radio'] > input ~ .icon,
-[class^='mo-radio'] > input ~ span,
+/* line 44, scss/_choose.scss */
+[class^='mo-radio'] > input ~ .icon, [class^='mo-radio'] > input ~ span,
 [class*=' mo-radio'] > input ~ .icon,
 [class*=' mo-radio'] > input ~ span,
 [class^='mo-checkbox'] > input ~ .icon,
 [class^='mo-checkbox'] > input ~ span,
 [class*=' mo-checkbox'] > input ~ .icon,
-[class*=' mo-checkbox'] > input ~ span {
+[class*=' mo-checkbox'] > input ~ span,
+[class^='mo-switch'] > input ~ .icon,
+[class^='mo-switch'] > input ~ span,
+[class*=' mo-switch'] > input ~ .icon,
+[class*=' mo-switch'] > input ~ span {
   cursor: pointer;
 }
 
-/* line 54, scss/_choose.scss */
+/* line 53, scss/_choose.scss */
 [class^='mo-radio'],
 [class*=' mo-radio'] {
   padding-left: 1.25rem;
@@ -948,7 +959,7 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
   cursor: not-allowed;
 }
 
-/* line 58, scss/_choose.scss */
+/* line 57, scss/_choose.scss */
 [class^='mo-radio'] + [class^='mo-radio'],
 [class^='mo-radio'] + [class*=' mo-radio'],
 [class*=' mo-radio'] + [class^='mo-radio'],
@@ -956,13 +967,13 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
   margin-left: 1rem;
 }
 
-/* line 62, scss/_choose.scss */
+/* line 61, scss/_choose.scss */
 [class^='mo-radio'] > .icon,
 [class*=' mo-radio'] > .icon {
   border-radius: 50%;
 }
 
-/* line 64, scss/_choose.scss */
+/* line 63, scss/_choose.scss */
 [class^='mo-radio'] > .icon:after,
 [class*=' mo-radio'] > .icon:after {
   top: 50%;
@@ -1035,7 +1046,7 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
   cursor: not-allowed;
 }
 
-/* line 90, scss/_choose.scss */
+/* line 91, scss/_choose.scss */
 [class^='mo-checkbox'],
 [class*=' mo-checkbox'] {
   padding-left: 1.25rem;
@@ -1075,7 +1086,7 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
   cursor: not-allowed;
 }
 
-/* line 94, scss/_choose.scss */
+/* line 95, scss/_choose.scss */
 [class^='mo-checkbox'] + [class^='mo-checkbox'],
 [class^='mo-checkbox'] + [class*=' mo-checkbox'],
 [class*=' mo-checkbox'] + [class^='mo-checkbox'],
@@ -1083,13 +1094,13 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
   margin-left: 1rem;
 }
 
-/* line 98, scss/_choose.scss */
+/* line 99, scss/_choose.scss */
 [class^='mo-checkbox'] > .icon,
 [class*=' mo-checkbox'] > .icon {
   border-radius: 0;
 }
 
-/* line 100, scss/_choose.scss */
+/* line 101, scss/_choose.scss */
 [class^='mo-checkbox'] > .icon:after,
 [class*=' mo-checkbox'] > .icon:after {
   top: 11.5%;
@@ -1163,6 +1174,249 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 .mo-checkbox--positive > input[type="checkbox"].disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* line 128, scss/_choose.scss */
+[class^='mo-switch'],
+[class*=' mo-switch'] {
+  padding-left: 2.5rem;
+}
+
+/* line 5, scss/mixins/_switch.scss */
+[class^='mo-switch'] > .icon,
+[class*=' mo-switch'] > .icon {
+  width: 2.5rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+}
+
+/* line 9, scss/mixins/_switch.scss */
+[class^='mo-switch'] > .icon:before,
+[class*=' mo-switch'] > .icon:before {
+  width: 2.375rem;
+  height: 1.375rem;
+  border-radius: 0.6875rem;
+}
+
+/* line 14, scss/mixins/_switch.scss */
+[class^='mo-switch'] > .icon:after,
+[class*=' mo-switch'] > .icon:after {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+/* line 20, scss/mixins/_switch.scss */
+[class^='mo-switch'] > input:checked ~ .icon:after,
+[class*=' mo-switch'] > input:checked ~ .icon:after {
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+}
+
+/* line 29, scss/mixins/_switch.scss */
+[class^='mo-switch'] > input:checked ~ .icon,
+[class*=' mo-switch'] > input:checked ~ .icon {
+  border-color: #bdbdbd;
+  background-color: #bdbdbd;
+}
+
+/* line 34, scss/mixins/_switch.scss */
+[class^='mo-switch'] > input:disabled ~ span, [class^='mo-switch'] > input.disabled ~ span,
+[class*=' mo-switch'] > input:disabled ~ span,
+[class*=' mo-switch'] > input.disabled ~ span {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* line 132, scss/_choose.scss */
+[class^='mo-switch'] + [class^='mo-switch'],
+[class^='mo-switch'] + [class*=' mo-switch'],
+[class*=' mo-switch'] + [class^='mo-switch'],
+[class*=' mo-switch'] + [class*=' mo-switch'] {
+  margin-left: 1rem;
+}
+
+/* line 136, scss/_choose.scss */
+[class^='mo-switch'] > .icon,
+[class*=' mo-switch'] > .icon {
+  border: 0.0625rem solid #dfdfdf;
+  background-color: #dfdfdf;
+  box-shadow: #fafafa 0 0 0 0 inset;
+}
+
+/* line 140, scss/_choose.scss */
+[class^='mo-switch'] > .icon:before, [class^='mo-switch'] > .icon:after,
+[class*=' mo-switch'] > .icon:before,
+[class*=' mo-switch'] > .icon:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+  transition: -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+  transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+  transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1), -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+}
+
+/* line 151, scss/_choose.scss */
+[class^='mo-switch'] > .icon:before,
+[class*=' mo-switch'] > .icon:before {
+  background-color: #fdfdfd;
+}
+
+/* line 154, scss/_choose.scss */
+[class^='mo-switch'] > .icon:after,
+[class*=' mo-switch'] > .icon:after {
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* line 161, scss/_choose.scss */
+[class^='mo-switch'] > input:checked ~ .icon:before,
+[class*=' mo-switch'] > input:checked ~ .icon:before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+/* line 164, scss/_choose.scss */
+[class^='mo-switch'] > input:active:not(:disabled):not(.disabled) ~ .icon,
+[class*=' mo-switch'] > input:active:not(:disabled):not(.disabled) ~ .icon {
+  -webkit-transition: background-color .1s, border .1s;
+  transition: background-color .1s, border .1s;
+}
+
+/* line 168, scss/_choose.scss */
+[class^='mo-switch'] > input:active:not(:disabled):not(.disabled) ~ .icon:after,
+[class*=' mo-switch'] > input:active:not(:disabled):not(.disabled) ~ .icon:after {
+  -webkit-transform: scale(1.4, 1);
+          transform: scale(1.4, 1);
+}
+
+/* line 29, scss/mixins/_switch.scss */
+.mo-switch--primary > input:checked ~ .icon {
+  border-color: #0275d8;
+  background-color: #0275d8;
+}
+
+/* line 34, scss/mixins/_switch.scss */
+.mo-switch--primary > input:disabled ~ span, .mo-switch--primary > input.disabled ~ span {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* line 29, scss/mixins/_switch.scss */
+.mo-switch--positive > input:checked ~ .icon {
+  border-color: #5cb85c;
+  background-color: #5cb85c;
+}
+
+/* line 34, scss/mixins/_switch.scss */
+.mo-switch--positive > input:disabled ~ span, .mo-switch--positive > input.disabled ~ span {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* line 29, scss/mixins/_switch.scss */
+.mo-switch--negative > input:checked ~ .icon {
+  border-color: #d9534f;
+  background-color: #d9534f;
+}
+
+/* line 34, scss/mixins/_switch.scss */
+.mo-switch--negative > input:disabled ~ span, .mo-switch--negative > input.disabled ~ span {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* line 187, scss/_choose.scss */
+.mo-switch--small {
+  padding-left: 1.875rem;
+}
+
+/* line 5, scss/mixins/_switch.scss */
+.mo-switch--small > .icon {
+  width: 1.875rem;
+  height: 1.125rem;
+  border-radius: 1.125rem;
+}
+
+/* line 9, scss/mixins/_switch.scss */
+.mo-switch--small > .icon:before {
+  width: 1.75rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* line 14, scss/mixins/_switch.scss */
+.mo-switch--small > .icon:after {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* line 20, scss/mixins/_switch.scss */
+.mo-switch--small > input:checked ~ .icon:after {
+  -webkit-transform: translateX(0.75rem);
+          transform: translateX(0.75rem);
+}
+
+/* line 190, scss/_choose.scss */
+.mo-switch--large {
+  font-size: 1rem;
+  padding-left: 3.125rem;
+}
+
+/* line 5, scss/mixins/_switch.scss */
+.mo-switch--large > .icon {
+  width: 3.125rem;
+  height: 1.875rem;
+  border-radius: 1.875rem;
+}
+
+/* line 9, scss/mixins/_switch.scss */
+.mo-switch--large > .icon:before {
+  width: 3rem;
+  height: 1.75rem;
+  border-radius: 0.875rem;
+}
+
+/* line 14, scss/mixins/_switch.scss */
+.mo-switch--large > .icon:after {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* line 20, scss/mixins/_switch.scss */
+.mo-switch--large > input:checked ~ .icon:after {
+  -webkit-transform: translateX(1.25rem);
+          transform: translateX(1.25rem);
+}
+
+/* line 196, scss/_choose.scss */
+.mo-switch--reverse {
+  padding-left: 0;
+  padding-right: 2.5rem;
+}
+
+/* line 199, scss/_choose.scss */
+.mo-switch--reverse > .icon {
+  left: auto;
+  right: 0;
+}
+
+/* line 202, scss/_choose.scss */
+.mo-switch--reverse > .icon ~ span {
+  margin-left: 0;
+  margin-right: .5rem;
+}
+
+/* line 207, scss/_choose.scss */
+.mo-switch--reverse.mo-switch--small {
+  padding-right: 1.875rem;
+}
+
+/* line 210, scss/_choose.scss */
+.mo-switch--reverse.mo-switch--large {
+  padding-right: 3.125rem;
 }
 
 /* line 1, scss/_utils.scss */
