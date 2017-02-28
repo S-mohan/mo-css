@@ -1,7 +1,8 @@
 @import './mixins/button';
 
 
-[class^="mo-button"], [class*=" mo-button"] {
+[class^='mo-button'],
+[class*=' mo-button'] {
     font-family: inherit;
 
     display: inline-block;
@@ -73,7 +74,8 @@
     border-radius: $form-pill;
 }
 
-[class^="mo-button"], [class*=" mo-button"]  {
+[class^='mo-button'],
+[class*=' mo-button'] {
     &.readonly,
     &[readonly] {
         cursor: default;
