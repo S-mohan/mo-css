@@ -18,6 +18,7 @@
 			background-color: $color;
 		}
 		&:disabled, &.disabled {
+			~ .icon,
 			~ span {
 				opacity: $disabled-opacity;
 				cursor: not-allowed;

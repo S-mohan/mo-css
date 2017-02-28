@@ -888,14 +888,18 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 44, scss/_choose.scss */
+[class^='mo-radio'] > input ~ .icon,
 [class^='mo-radio'] > input ~ span,
+[class*=' mo-radio'] > input ~ .icon,
 [class*=' mo-radio'] > input ~ span,
+[class^='mo-checkbox'] > input ~ .icon,
 [class^='mo-checkbox'] > input ~ span,
+[class*=' mo-checkbox'] > input ~ .icon,
 [class*=' mo-checkbox'] > input ~ span {
   cursor: pointer;
 }
 
-/* line 51, scss/_choose.scss */
+/* line 52, scss/_choose.scss */
 [class^='mo-radio'],
 [class*=' mo-radio'] {
   padding-left: 1.25rem;
@@ -923,14 +927,18 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 21, scss/mixins/_radio.scss */
-[class^='mo-radio'] > input[type="radio"]:disabled ~ span, [class^='mo-radio'] > input[type="radio"].disabled ~ span,
+[class^='mo-radio'] > input[type="radio"]:disabled ~ .icon,
+[class^='mo-radio'] > input[type="radio"]:disabled ~ span, [class^='mo-radio'] > input[type="radio"].disabled ~ .icon,
+[class^='mo-radio'] > input[type="radio"].disabled ~ span,
+[class*=' mo-radio'] > input[type="radio"]:disabled ~ .icon,
 [class*=' mo-radio'] > input[type="radio"]:disabled ~ span,
+[class*=' mo-radio'] > input[type="radio"].disabled ~ .icon,
 [class*=' mo-radio'] > input[type="radio"].disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-/* line 55, scss/_choose.scss */
+/* line 56, scss/_choose.scss */
 [class^='mo-radio'] + [class^='mo-radio'],
 [class^='mo-radio'] + [class*=' mo-radio'],
 [class*=' mo-radio'] + [class^='mo-radio'],
@@ -938,13 +946,13 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
   margin-left: 1rem;
 }
 
-/* line 59, scss/_choose.scss */
+/* line 60, scss/_choose.scss */
 [class^='mo-radio'] > .icon,
 [class*=' mo-radio'] > .icon {
   border-radius: 50%;
 }
 
-/* line 61, scss/_choose.scss */
+/* line 62, scss/_choose.scss */
 [class^='mo-radio'] > .icon:after,
 [class*=' mo-radio'] > .icon:after {
   position: absolute;
@@ -972,7 +980,9 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 21, scss/mixins/_radio.scss */
-.mo-radio--primary > input[type="radio"]:disabled ~ span, .mo-radio--primary > input[type="radio"].disabled ~ span {
+.mo-radio--primary > input[type="radio"]:disabled ~ .icon,
+.mo-radio--primary > input[type="radio"]:disabled ~ span, .mo-radio--primary > input[type="radio"].disabled ~ .icon,
+.mo-radio--primary > input[type="radio"].disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -990,7 +1000,9 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 21, scss/mixins/_radio.scss */
-.mo-radio--negative > input[type="radio"]:disabled ~ span, .mo-radio--negative > input[type="radio"].disabled ~ span {
+.mo-radio--negative > input[type="radio"]:disabled ~ .icon,
+.mo-radio--negative > input[type="radio"]:disabled ~ span, .mo-radio--negative > input[type="radio"].disabled ~ .icon,
+.mo-radio--negative > input[type="radio"].disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -1008,12 +1020,14 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 21, scss/mixins/_radio.scss */
-.mo-radio--positive > input[type="radio"]:disabled ~ span, .mo-radio--positive > input[type="radio"].disabled ~ span {
+.mo-radio--positive > input[type="radio"]:disabled ~ .icon,
+.mo-radio--positive > input[type="radio"]:disabled ~ span, .mo-radio--positive > input[type="radio"].disabled ~ .icon,
+.mo-radio--positive > input[type="radio"].disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-/* line 92, scss/_choose.scss */
+/* line 93, scss/_choose.scss */
 [class^='mo-checkbox'],
 [class*=' mo-checkbox'] {
   padding-left: 1.25rem;
@@ -1042,14 +1056,18 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 22, scss/mixins/_checkbox.scss */
-[class^='mo-checkbox'] > input[type="checkbox"]:disabled ~ span, [class^='mo-checkbox'] > input[type="checkbox"].disabled ~ span,
+[class^='mo-checkbox'] > input[type="checkbox"]:disabled ~ .icon,
+[class^='mo-checkbox'] > input[type="checkbox"]:disabled ~ span, [class^='mo-checkbox'] > input[type="checkbox"].disabled ~ .icon,
+[class^='mo-checkbox'] > input[type="checkbox"].disabled ~ span,
+[class*=' mo-checkbox'] > input[type="checkbox"]:disabled ~ .icon,
 [class*=' mo-checkbox'] > input[type="checkbox"]:disabled ~ span,
+[class*=' mo-checkbox'] > input[type="checkbox"].disabled ~ .icon,
 [class*=' mo-checkbox'] > input[type="checkbox"].disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-/* line 96, scss/_choose.scss */
+/* line 97, scss/_choose.scss */
 [class^='mo-checkbox'] + [class^='mo-checkbox'],
 [class^='mo-checkbox'] + [class*=' mo-checkbox'],
 [class*=' mo-checkbox'] + [class^='mo-checkbox'],
@@ -1057,13 +1075,13 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
   margin-left: 1rem;
 }
 
-/* line 100, scss/_choose.scss */
+/* line 101, scss/_choose.scss */
 [class^='mo-checkbox'] > .icon,
 [class*=' mo-checkbox'] > .icon {
   border-radius: 0;
 }
 
-/* line 102, scss/_choose.scss */
+/* line 103, scss/_choose.scss */
 [class^='mo-checkbox'] > .icon:after,
 [class*=' mo-checkbox'] > .icon:after {
   position: absolute;
@@ -1092,7 +1110,9 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 22, scss/mixins/_checkbox.scss */
-.mo-checkbox--primary > input[type="checkbox"]:disabled ~ span, .mo-checkbox--primary > input[type="checkbox"].disabled ~ span {
+.mo-checkbox--primary > input[type="checkbox"]:disabled ~ .icon,
+.mo-checkbox--primary > input[type="checkbox"]:disabled ~ span, .mo-checkbox--primary > input[type="checkbox"].disabled ~ .icon,
+.mo-checkbox--primary > input[type="checkbox"].disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -1111,7 +1131,9 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 22, scss/mixins/_checkbox.scss */
-.mo-checkbox--negative > input[type="checkbox"]:disabled ~ span, .mo-checkbox--negative > input[type="checkbox"].disabled ~ span {
+.mo-checkbox--negative > input[type="checkbox"]:disabled ~ .icon,
+.mo-checkbox--negative > input[type="checkbox"]:disabled ~ span, .mo-checkbox--negative > input[type="checkbox"].disabled ~ .icon,
+.mo-checkbox--negative > input[type="checkbox"].disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -1130,7 +1152,9 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 22, scss/mixins/_checkbox.scss */
-.mo-checkbox--positive > input[type="checkbox"]:disabled ~ span, .mo-checkbox--positive > input[type="checkbox"].disabled ~ span {
+.mo-checkbox--positive > input[type="checkbox"]:disabled ~ .icon,
+.mo-checkbox--positive > input[type="checkbox"]:disabled ~ span, .mo-checkbox--positive > input[type="checkbox"].disabled ~ .icon,
+.mo-checkbox--positive > input[type="checkbox"].disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
 }
