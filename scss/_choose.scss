@@ -25,13 +25,15 @@
         position: absolute;
         top: 50%;
         left: 0;
-
-        display: block;
-
         transform: translate(0, -50%);
-
         border: rem(1) solid transparent;
         background-color: #fff;
+        margin: 0;
+        padding: 0;
+		&:after {
+			content: '';
+			position: absolute;
+		}
         ~ span {
             margin-left: .5rem;
         }
@@ -60,17 +62,12 @@
     > .icon {
         border-radius: 50%;
         &:after {
-            position: absolute;
             top: 50%;
             left: 50%;
-
             width: rem(12);
             height: rem(12);
             margin-top: rem(-6);
             margin-left: rem(-6);
-
-            content: '';
-
             border-radius: 50%;
             background-color: transparent;
         }
@@ -101,16 +98,11 @@
     > .icon {
         border-radius: 0;
         &:after {
-            position: absolute;
             top: 11.5%;
             left: 11.2%;
-
             width: 80%;
             height: 50%;
-
-            content: '';
             transform: rotate(-50deg);
-
             border: rem(2) solid transparent;
             background-color: transparent;
         }
