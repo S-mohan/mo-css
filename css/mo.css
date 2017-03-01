@@ -31,7 +31,7 @@ html {
 
 /* line 13, scss/_reset.scss */
 body {
-  font-family: "Pingfang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: "Pingfang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "WenQuanYi Micro Hei", sans-serif;
   font-size: 14px;
   line-height: 1.5;
   margin: 0;
@@ -1220,8 +1220,12 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 34, scss/mixins/_switch.scss */
-[class^='mo-switch'] > input:disabled ~ span, [class^='mo-switch'] > input.disabled ~ span,
+[class^='mo-switch'] > input:disabled ~ .icon,
+[class^='mo-switch'] > input:disabled ~ span, [class^='mo-switch'] > input.disabled ~ .icon,
+[class^='mo-switch'] > input.disabled ~ span,
+[class*=' mo-switch'] > input:disabled ~ .icon,
 [class*=' mo-switch'] > input:disabled ~ span,
+[class*=' mo-switch'] > input.disabled ~ .icon,
 [class*=' mo-switch'] > input.disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
@@ -1299,7 +1303,9 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 34, scss/mixins/_switch.scss */
-.mo-switch--primary > input:disabled ~ span, .mo-switch--primary > input.disabled ~ span {
+.mo-switch--primary > input:disabled ~ .icon,
+.mo-switch--primary > input:disabled ~ span, .mo-switch--primary > input.disabled ~ .icon,
+.mo-switch--primary > input.disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -1311,7 +1317,9 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 34, scss/mixins/_switch.scss */
-.mo-switch--positive > input:disabled ~ span, .mo-switch--positive > input.disabled ~ span {
+.mo-switch--positive > input:disabled ~ .icon,
+.mo-switch--positive > input:disabled ~ span, .mo-switch--positive > input.disabled ~ .icon,
+.mo-switch--positive > input.disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -1323,7 +1331,9 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 }
 
 /* line 34, scss/mixins/_switch.scss */
-.mo-switch--negative > input:disabled ~ span, .mo-switch--negative > input.disabled ~ span {
+.mo-switch--negative > input:disabled ~ .icon,
+.mo-switch--negative > input:disabled ~ span, .mo-switch--negative > input.disabled ~ .icon,
+.mo-switch--negative > input.disabled ~ span {
   opacity: 0.5;
   cursor: not-allowed;
 }
