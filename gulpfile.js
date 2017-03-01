@@ -9,7 +9,7 @@ const gulpSequence = require('gulp-sequence')
 
 const CONFIGS = {
 	sass: {
-		sourceComments: true,
+		sourceComments: false,
 		outputStyle: 'expanded'
 	},
 	css: {
@@ -32,6 +32,15 @@ gulp.task('compile:sass', () => {
 		.pipe(autoprefixer(CONFIGS.autoprefixer))
 		.pipe(gulp.dest('./css'))
 })
+
+
+gulp.task('build:css', () => {
+    return gulp.src('./css/mo.css')
+        .pipe(cleanCss(CONFIGS.css))
+        .pipe(rename('mo.min.css'))
+        .pipe(gulp.dest('./css/'));
+});
+
 
 gulp.task('watch', () => {
 	gulp.watch('./scss/**/*.scss', ['compile:sass'])

@@ -1,8 +1,4 @@
-/**
- * [buttonSize]
- * @param  {[type]} $size [size map]
- * @return {[type]} 
- */
+
 @mixin buttonSize ($size) {
     $font-size: map_get($size, font-size);
     $line-height: map_get($size, line-height);
@@ -13,26 +9,18 @@
     padding: rem($padding-y $padding-x);
 }
 
-/**
- * [buttonStyle]
- * @param  {[type]} $border       border-color
- * @param  {[type]} $background      background-color
- * @param  {[type]} $color          text-color
- * @param  {[type]} $hoverBorder     hover & active border-color
- * @param  {[type]} $hoverBackground  hover & active background-color
- * @param  {[type]} $hoverColor      hover & active text-color
- * @return {[type]}               
- */
+
+
 @mixin buttonStyle ($border, $background, $color, $hoverBorder, $hoverBackground, $hoverColor) {
+    color: $color;
     border-color: $border;
     background-color: $background;
-    color: $color;
-
     &:not(.readonly):not([readonly]):not(.disabled):not([disabled]) {
-        &:hover, &:active {
+        &:hover,
+        &:active {
+            color: $hoverColor;
             border-color: $hoverBorder;
             background-color: $hoverBackground;
-            color: $hoverColor;
         }
     }
 }

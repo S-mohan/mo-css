@@ -1,8 +1,3 @@
-/**
- * [inputSize]
- * @param  {[type]} $size [size map]
- * @return {[type]} 
- */
 @mixin inputSize ($size) {
     $font-size: map_get($size, font-size);
     $line-height: map_get($size, line-height);
@@ -11,16 +6,12 @@
     $height: $font-size * $line-height + 2 * $padding-y + 2;
     font-size: rem($font-size);
     line-height: $line-height;
-    padding: rem($padding-y $padding-x);
+
     height: rem($height);
+    padding: rem($padding-y $padding-x);
 }
 
-/**
- * [inputStyle]
- * @param  {[type]} $border      [border-color]
- * @param  {[type]} $hoverBorder [focus border-color]
- * @return {[type]} 
- */
+
 @mixin inputStyle ($border, $focusBorder) {
     border-color: $border;
     &:not(.readonly):not([readonly]):not(.disabled):not([disabled]) {

@@ -1,26 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="smohan">
-    <meta name="homepage" content="https://smohan.im">
-    <title>MoCss - 水墨寒的博客</title>
-    <link rel="stylesheet" href="../css/mo.css">
+	<meta charset="UTF-8">
+	<meta name="author" content="smohan">
+	<meta name="homepage" content="https://smohan.im">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>MoCss - 水墨寒的博客</title>
+	<link rel="stylesheet" href="../css/mo.css">
 	<link rel="stylesheet" href="demo.css">	
 </head>
 <body>
+	<article class="demo">
+		<header class="demo-header">
+			<h1>Mo-Button</h1>
+		</header>
+		<main class="demo-body">
+			<section class="demo-section">
+				<form class="demo-form" onsubmit="return false">
+					<legend>default</legend>	
+					<fieldset>
+						<button class="mo-button">mo-button</button>
+						<button class="mo-button" disabled>disabled</button>
+						<button class="mo-button--radius">radius</button>
+						<button class="mo-button--pill">button pill</button>
+						<button class="mo-button--link">link</button>
+					</fieldset>
+					<legend>primary</legend>	
+					<fieldset>
+						<button class="mo-button--primary">primary</button>
+						<button class="mo-button--primary" disabled>disabled</button>
+						<button class="mo-button--primary mo-button--radius">radius</button>
+						<button class="mo-button--primary mo-button--pill">button pill</button>
+					</fieldset>	
+					<legend>negative</legend>	
+					<fieldset>
+						<button class="mo-button--negative">negative</button>
+						<button class="mo-button--negative" disabled>disabled</button>
+						<button class="mo-button--negative mo-button--radius">radius</button>
+						<button class="mo-button--negative mo-button--pill">button pill</button>
+					</fieldset>	
+					<legend>positive</legend>	
+					<fieldset>
+						<button class="mo-button--positive">positive</button>
+						<button class="mo-button--positive" disabled>disabled</button>
+						<button class="mo-button--positive mo-button--radius">radius</button>
+						<button class="mo-button--positive mo-button--pill">button pill</button>
+					</fieldset>	
+					<legend>small</legend>	
+					<fieldset>
+						<button class="mo-button--small">positive</button>
+						<button class="mo-button--small" disabled>disabled</button>
+						<button class="mo-button--small mo-button--radius">radius</button>
+						<button class="mo-button--small mo-button--pill">button pill</button>
+						<button class="mo-button--small mo-button--link">link</button>
+						<br/>
+						<br/>
+						<button class="mo-button--small mo-button--primary">primary</button>
+						<button class="mo-button--small mo-button--primary" disabled>disabled</button>
+						<button class="mo-button--small mo-button--primary mo-button--radius">radius</button>
+						<button class="mo-button--small mo-button--primary mo-button--pill">button pill</button>
+						<br/>
+						<br/>
+						<button class="mo-button--small mo-button--negative">negative</button>
+						<button class="mo-button--small mo-button--negative" disabled>disabled</button>
+						<button class="mo-button--small mo-button--negative mo-button--radius">radius</button>
+						<button class="mo-button--small mo-button--negative mo-button--pill">button pill</button>
+						<br/>
+						<br/>
+						<button class="mo-button--small mo-button--positive">positive</button>
+						<button class="mo-button--small mo-button--positive" disabled>disabled</button>
+						<button class="mo-button--small mo-button--positive mo-button--radius">radius</button>
+						<button class="mo-button--small mo-button--positive mo-button--pill">button pill</button>
+					</fieldset>	
+					<legend>large</legend>	
+					<fieldset>
+						<button class="mo-button--large">positive</button>
+						<button class="mo-button--large" disabled>disabled</button>
+						<button class="mo-button--large mo-button--radius">radius</button>
+						<button class="mo-button--large mo-button--pill">button pill</button>
+						<button class="mo-button--large mo-button--link">link</button>
+						<br/>
+						<br/>
+						<button class="mo-button--large mo-button--primary">primary</button>
+						<button class="mo-button--large mo-button--primary" disabled>disabled</button>
+						<button class="mo-button--large mo-button--primary mo-button--radius">radius</button>
+						<button class="mo-button--large mo-button--primary mo-button--pill">button pill</button>
+						<br/>
+						<br/>
+						<button class="mo-button--large mo-button--negative">negative</button>
+						<button class="mo-button--large mo-button--negative" disabled>disabled</button>
+						<button class="mo-button--large mo-button--negative mo-button--radius">radius</button>
+						<button class="mo-button--large mo-button--negative mo-button--pill">button pill</button>
+						<br/>
+						<br/>
+						<button class="mo-button--large mo-button--positive">positive</button>
+						<button class="mo-button--large mo-button--positive" disabled>disabled</button>
+						<button class="mo-button--large mo-button--positive mo-button--radius">radius</button>
+						<button class="mo-button--large mo-button--positive mo-button--pill">button pill</button>
+					</fieldset>	
+					<legend>fluid</legend>	
+					<fieldset>
+						<button class="mo-button--fluid">positive</button>
+						<br/>
+						<button class="mo-button--fluid mo-button--primary">primary</button>
+						<br/>
+						<button class="mo-button--fluid mo-button--negative">negative</button>
+						<br/>
+						<button class="mo-button--fluid mo-button--positive">positive</button>
+						<br/>
+						<button class="mo-button--fluid mo-button--positive mo-button--radius">radius</button>
+						<br/>
+						<button class="mo-button--fluid mo-button--positive mo-button--pill">button pill</button>
+					</fieldset>	
+				</form>	
 
-<article class="demo">
-	<h1 class="demo-title">Mo-Button</h1>
-	<aside class="demo-description"></aside>
-	<section class="demo-main">
-		<button class="mo-button">mo-button</button>
-		<button class="mo-button--primary">mo-button</button>
-		<button class="mo-button--negative">mo-button</button>
-		<button class="mo-button--positive">mo-button</button>
-		<button class="mo-button--link">mo-button</button>
-	</section>
-</article>
+			</section>
+		</main>
+	</article>
 
 </body>
 </html>

@@ -1,13 +1,42 @@
+body {
+	background-color: #f5f5f5;
+}
 .demo {
-	padding: 4rem;
+	padding: 1rem;
+	max-width: 960px;
+	margin: 0 auto;
+	background-color: #fff;
 }
 
-.demo > .demo-title {
+.demo-header {
+	
+}
+
+.demo-nav {
+
+}
+
+.demo-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.demo-nav ul >li {
+	padding: .5rem 0;
+	border-bottom: 1px solid #eee;
+}
+
+
+.demo-body {
+	
+}
+
+.demo-form legend{
+	margin-bottom: .5rem
+}
+.demo-form fieldset {
+	margin-bottom:  1rem;
 	padding-bottom: 1rem;
-	border-bottom: 2px solid #ccc;
-	margin-bottom: 1rem;
-}
-
-.demo > .demo-main {
-	padding: 1rem 0;
+	border-bottom: 1px solid #eee;
 }
