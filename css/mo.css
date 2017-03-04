@@ -1263,7 +1263,8 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
   border-bottom: 2px solid #d3d3d3;
 }
 
-.mo-table--bordered td, .mo-table--bordered th {
+.mo-table--bordered td,
+.mo-table--bordered th {
   border: 1px solid #d3d3d3;
 }
 
@@ -1273,8 +1274,8 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
 
 .mo-table--responsive {
   display: block;
-  width: 100%;
   overflow-x: auto;
+  width: 100%;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
