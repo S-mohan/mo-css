@@ -1,0 +1,44 @@
+[class^='mo-table'],
+[class*=' mo-table'] {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    td,
+    th {
+        padding: rem(10);
+        vertical-align: top;
+        border-top: 1px solid $color-border;
+        &[align='left'] {
+            text-align: left;
+        }
+        &[align='center'] {
+            text-align: center;
+        }
+        &[align='right'] {
+            text-align: right;
+        }
+    }
+    thead th {
+        vertical-align: bottom;
+
+        border-bottom: 2px solid $color-border;
+    }
+}
+
+.mo-table--bordered {
+	td, th {
+		border: 1px solid $color-border;
+	}
+	thead th {
+		border-bottom-width: 2px;
+	}
+}
+
+//响应式
+.mo-table--responsive {
+	    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}

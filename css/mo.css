@@ -1219,6 +1219,65 @@ select[multiple][class^='mo-input'], select[multiple][class*=' mo-input'] {
   padding-right: 3.125rem;
 }
 
+[class^='mo-table'],
+[class*=' mo-table'] {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+[class^='mo-table'] td,
+[class^='mo-table'] th,
+[class*=' mo-table'] td,
+[class*=' mo-table'] th {
+  padding: 0.625rem;
+  vertical-align: top;
+  border-top: 1px solid #d3d3d3;
+}
+
+[class^='mo-table'] td[align='left'],
+[class^='mo-table'] th[align='left'],
+[class*=' mo-table'] td[align='left'],
+[class*=' mo-table'] th[align='left'] {
+  text-align: left;
+}
+
+[class^='mo-table'] td[align='center'],
+[class^='mo-table'] th[align='center'],
+[class*=' mo-table'] td[align='center'],
+[class*=' mo-table'] th[align='center'] {
+  text-align: center;
+}
+
+[class^='mo-table'] td[align='right'],
+[class^='mo-table'] th[align='right'],
+[class*=' mo-table'] td[align='right'],
+[class*=' mo-table'] th[align='right'] {
+  text-align: right;
+}
+
+[class^='mo-table'] thead th,
+[class*=' mo-table'] thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #d3d3d3;
+}
+
+.mo-table--bordered td, .mo-table--bordered th {
+  border: 1px solid #d3d3d3;
+}
+
+.mo-table--bordered thead th {
+  border-bottom-width: 2px;
+}
+
+.mo-table--responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 .mo-left {
   float: left !important;
 }
