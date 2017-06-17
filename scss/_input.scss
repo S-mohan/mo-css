@@ -1,116 +1,83 @@
 @import './mixins/input';
 
-
-[class^='mo-input'],
-[class*=' mo-input'] {
+.mo-input {
     font-family: inherit;
-
     display: inline-block;
-
     width: 100%;
-
     color: $color-text;
     border: rem(1) solid transparent;
     border-radius: 0;
     outline: none;
     background-color: #fff;
     background-image: none;
-    //for ios safari
-
     appearance: none;
     @include inputStyle ($color-border, $color-primary);
     @include inputSize ($form-size);
+
+    //size
+    &.mo-input--tiny {
+        @include inputSize ($form-size-tiny);
+    }
+    &.mo-input--small {
+        @include inputSize ($form-size-small);
+    }
+    &.mo-input--large {
+        @include inputSize ($form-size-large);
+    }
+    //style
+    &.mo-input--primary {
+        @include inputStyle ($color-primary, $color-primary);
+    }
+    &.mo-input--positive {
+        @include inputStyle ($color-positive, $color-positive);
+    }
+    &.mo-input--negative {
+        @include inputStyle ($color-negative, $color-negative);
+    }
+    @include placeholder {
+        color: $color-placeholder;
+    }
     &:not(.readonly):not([readonly]):not(.disabled):not([disabled]) {
         &:focus {
             @if $enable-form-translation {
                 transition: all .16s cubic-bezier(.55, .09, .68, .53);
-
                 outline: 0;
             }
         }
     }
-}
-
-
-
-//size
-.mo-input--tiny {
-    @include inputSize ($form-size-tiny);
-}
-
-
-.mo-input--small {
-    @include inputSize ($form-size-small);
-}
-
-
-.mo-input--large {
-    @include inputSize ($form-size-large);
-}
-
-
-//style
-.mo-input--primary {
-    @include inputStyle ($color-primary, $color-primary);
-}
-.mo-input--positive {
-    @include inputStyle ($color-positive, $color-positive);
-}
-.mo-input--negative {
-    @include inputStyle ($color-negative, $color-negative);
-}
-.mo-input--radius {
-    border-radius: $form-radius;
-}
-.mo-input--pill {
-    border-radius: $form-pill;
-}
-
-
-[class^='mo-input'],
-[class*=' mo-input'] {
-    @include placeholder {
-        color: $color-placeholder;
-    }
-    &.readonly,
-    &[readonly] {
+    &.readonly, &[readonly] {
         cursor: default;
     }
-    &.disabled,
-    &[disabled] {
+    &.disabled, &[disabled] {
         cursor: not-allowed;
-
         opacity: $disabled-opacity;
     }
 }
 
+//fixed select
 select {
-    &[class^='mo-input']:not([multiple]),
-    &[class*=' mo-input']:not([multiple]) {
+    &.mo-input:not([multiple]) {
         padding-right: 1.75rem;
-
         vertical-align: middle;
-
         background-image: $image64-dropdown;
         background-repeat: no-repeat;
         background-position: right rem(5) center;
+
         &::-ms-expand {
             display: none;
         }
     }
 }
 
-
-textarea,
-select[multiple] {
-    &[class^='mo-input'],
-    &[class*=' mo-input'] {
+//fixed textarea height
+textarea, select[multiple] {
+    &.mo-input {
         height: auto;
     }
 }
+
 select[multiple] {
-    &[class^='mo-input'],
-    &[class*=' mo-input'] {
+    &.mo-input {
         padding-right: 0\0;
     }
 }

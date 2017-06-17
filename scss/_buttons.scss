@@ -1,89 +1,80 @@
 @import './mixins/button';
 
-
-[class^='mo-button'],
-[class*=' mo-button'] {
+.mo-btn {
     font-family: inherit;
-
     display: inline-block;
-
     cursor: pointer;
     user-select: none;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
     text-decoration: none;
-
     border: rem(1) solid transparent;
     border-radius: 0;
     outline: none;
-
     appearance: none;
     @include buttonSize ($form-size);
     @include buttonStyle($color-border, #fff, $color-text, darken($color-border, 5%), $color-lighter, $color-text);
+
+    //size
+    &.mo-btn--tiny {
+        @include buttonSize ($form-size-tiny);
+    }
+    &.mo-btn--small {
+        @include buttonSize ($form-size-small);
+    }
+    &.mo-btn--large {
+        @include buttonSize ($form-size-large);
+    }
+   
+    //style 
+    &.mo-btn--primary {
+        @include buttonStyle($color-primary, $color-primary, #fff, darken($color-primary, 10%), darken($color-primary, 10%), #fff);
+    }
+    &.mo-btn--negative {
+        @include buttonStyle($color-negative, $color-negative, #fff, darken($color-negative, 10%), darken($color-negative, 10%), #fff);
+    }
+    &.mo-btn--positive {
+        @include buttonStyle($color-positive, $color-positive, #fff, darken($color-positive, 10%), darken($color-positive, 10%), #fff);
+    }
+    &.mo-btn--link {
+        @include buttonStyle(transparent, transparent, $color-primary, transparent, transparent, darken($color-primary, 10%));
+    }
+    
+    //outline
+    
+    &.mo-btn-outline {
+        @include buttonStyle($color-border, transparent, $color-text, $color-border, $color-border, $color-title);
+    }
+
+    &.mo-btn-outline--primary {
+        @include buttonStyle($color-primary,transparent, $color-primary, $color-primary, $color-primary, #fff);
+    }
+
+    &.mo-btn-outline--negative {
+       @include buttonStyle($color-negative, transparent, $color-negative, $color-negative,$color-negative, #fff);
+    }
+
+    &.mo-btn-outline--positive {
+        @include buttonStyle($color-positive, transparent, $color-positive, $color-positive, $color-positive, #fff);
+    }
+
     &:not(.readonly):not([readonly]):not(.disabled):not([disabled]) {
-        &:hover,
-        &:active {
+        &:hover, &:active {
             text-decoration: none;
+
             @if $enable-form-translation {
                 transition: all .16s cubic-bezier(.55, .09, .68, .53);
             }
         }
     }
-}
-
-//size
-.mo-button--tiny {
-    @include buttonSize ($form-size-tiny);
-}
-
-
-.mo-button--small {
-    @include buttonSize ($form-size-small);
-}
-
-
-.mo-button--large {
-    @include buttonSize ($form-size-large);
-}
-
-.mo-button--fluid {
-    display: block;
-
-    width: 100%;
-}
-
-
-//style
-.mo-button--primary {
-    @include buttonStyle($color-primary, $color-primary, #fff, darken($color-primary, 10%), darken($color-primary, 10%), #fff);
-}
-.mo-button--positive {
-    @include buttonStyle($color-positive, $color-positive, #fff, darken($color-positive, 10%), darken($color-positive, 10%), #fff);
-}
-.mo-button--negative {
-    @include buttonStyle($color-negative, $color-negative, #fff, darken($color-negative, 10%), darken($color-negative, 10%), #fff);
-}
-.mo-button--link {
-    @include buttonStyle(transparent, transparent, $color-primary, transparent, transparent, darken($color-primary, 10%));
-}
-.mo-button--radius {
-    border-radius: $form-radius;
-}
-.mo-button--pill {
-    border-radius: $form-pill;
-}
-
-[class^='mo-button'],
-[class*=' mo-button'] {
-    &.readonly,
-    &[readonly] {
+    
+    //readonly, disabled
+    &.readonly, &[readonly] {
         cursor: default;
     }
-    &.disabled,
-    &[disabled] {
+    &.disabled, &[disabled] {
         cursor: not-allowed;
-
         opacity: $disabled-opacity;
     }
 }

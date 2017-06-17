@@ -2,34 +2,24 @@
 @import './mixins/radio';
 @import './mixins/switch';
 
-[class^='mo-radio'],
-[class*=' mo-radio'],
-[class^='mo-checkbox'],
-[class*=' mo-checkbox'],
-[class^='mo-switch'],
-[class*=' mo-switch'] {
+.mo-radio, .mo-checkbox, .mo-switch {
     position: relative;
-
     display: inline;
-
     margin: 0;
-
     user-select: none;
+
     > .icon {
         position: absolute;
         top: 50%;
         left: 0;
-
         margin: 0;
         padding: 0;
-
         transform: translate(0, -50%);
-
         border: rem(1) solid transparent;
         background-color: #fff;
+
         &:after {
             position: absolute;
-
             content: '';
         }
         ~ span {
@@ -39,111 +29,97 @@
     > input {
         position: absolute;
         z-index: -1;
-
         opacity: 0;
+
         ~ .icon, ~ span {
             cursor: pointer;
         }
     }
 }
-
-
-
 //mo-radio
-[class^='mo-radio'],
-[class*=' mo-radio'] {
+.mo-radio {
     @include radioSize(1.25rem);
     @include radioStyle($color-placeholder);
-    & + [class^='mo-radio'],
-    & + [class*=' mo-radio'] {
+
+    & + .mo-radio {
         margin-left: 1rem;
     }
     > .icon {
         border-radius: 50%;
+
         &:after {
             top: 50%;
             left: 50%;
-
             width: rem(12);
             height: rem(12);
             margin-top: rem(-6);
             margin-left: rem(-6);
-
             border-radius: 50%;
             background-color: transparent;
         }
     }
+    //mo-radio--[style] 
+    &.mo-radio--primary {
+        @include radioStyle($color-primary);
+    }
+    &.mo-radio--negative {
+        @include radioStyle($color-negative);
+    }
+    &.mo-radio--positive {
+        @include radioStyle($color-positive);
+    }
 }
-
-//mo-radio--[style] 
-.mo-radio--primary {
-    @include radioStyle($color-primary);
-}
-.mo-radio--negative {
-    @include radioStyle($color-negative);
-}
-.mo-radio--positive {
-    @include radioStyle($color-positive);
-}
-
-
 //mo-checkbox
-[class^='mo-checkbox'],
-[class*=' mo-checkbox'] {
+.mo-checkbox {
     @include checkboxSize(1.25rem);
     @include checkboxStyle($color-placeholder);
-    & + [class^='mo-checkbox'],
-    & + [class*=' mo-checkbox'] {
+
+    & + .mo-checkbox {
         margin-left: 1rem;
     }
     > .icon {
         border-radius: 0;
+
         &:after {
             top: 11.5%;
             left: 11.2%;
-
             width: 80%;
             height: 50%;
-
             transform: rotate(-50deg);
-
             border: rem(2) solid transparent;
             background-color: transparent;
         }
     }
+    //mo-checkbox--[style] 
+    &.mo-checkbox--primary {
+        @include checkboxStyle($color-primary);
+    }
+    &.mo-checkbox--negative {
+        @include checkboxStyle($color-negative);
+    }
+    &.mo-checkbox--positive {
+        @include checkboxStyle($color-positive);
+    }
 }
-
-//mo-checkbox--[style] 
-.mo-checkbox--primary {
-    @include checkboxStyle($color-primary);
-}
-.mo-checkbox--negative {
-    @include checkboxStyle($color-negative);
-}
-.mo-checkbox--positive {
-    @include checkboxStyle($color-positive);
-}
-
 //mo-switch
-[class^='mo-switch'],
-[class*=' mo-switch'] {
+.mo-switch {
     @include switchSize(rem(40), rem(24));
     @include switchStyle($color-placeholder);
-    & + [class^='mo-switch'],
-    & + [class*=' mo-switch'] {
+
+    & + .mo-switch {
         margin-left: 1rem;
     }
     > .icon {
         border: rem(1) solid #dfdfdf;
         background-color: #dfdfdf;
         box-shadow: #fafafa 0 0 0 0 inset;
-        &:before,
-        &:after {
+
+        &:before, &:after {
             position: absolute;
             top: 0;
             left: 0;
-
             content: '';
+
             @if $enable-form-translation {
                 transition: transform .35s cubic-bezier(.45, 1, .4, 1);
             }
@@ -170,44 +146,42 @@
             }
         }
     }
-}
+    //mo-switch--[style]
+    &.mo-switch--primary {
+        @include switchStyle($color-primary);
+    }
+    &.mo-switch--positive {
+        @include switchStyle($color-positive);
+    }
+    &.mo-switch--negative {
+        @include switchStyle($color-negative);
+    }
+    //mo-switch--[size]
+    &.mo-switch--small {
+        @include switchSize(rem(30), rem(18));
+    }
+    &.mo-switch--large {
+        font-size: 1rem;
+        @include switchSize(rem(50), rem(30));
+    }
+    &.mo-switch--reverse {
+        padding-left: 0;
+        padding-right: rem(40);
 
-//mo-switch--[style]
-.mo-switch--primary {
-    @include switchStyle($color-primary);
-}
-.mo-switch--positive {
-    @include switchStyle($color-positive);
-}
-.mo-switch--negative {
-    @include switchStyle($color-negative);
-}
+        > .icon {
+            left: auto;
+            right: 0;
 
-//mo-switch--[size]
-.mo-switch--small {
-    @include switchSize(rem(30), rem(18));
-}
-.mo-switch--large {
-    font-size: 1rem;
-
-    @include switchSize(rem(50), rem(30));
-}
-
-.mo-switch--reverse {
-	padding-left: 0;
-	padding-right: rem(40);
-	> .icon {
-		left: auto;
-		right: 0;
-		 ~ span {
-            margin-left: 0;
-            margin-right: .5rem;
+            ~ span {
+                margin-left: 0;
+                margin-right: .5rem;
+            }
         }
-	}
-	&.mo-switch--small {
-		padding-right: rem(30);
-	}
-	&.mo-switch--large {
-		padding-right: rem(50);
-	}
+        &.mo-switch--small {
+            padding-right: rem(30);
+        }
+        &.mo-switch--large {
+            padding-right: rem(50);
+        }
+    }
 }
